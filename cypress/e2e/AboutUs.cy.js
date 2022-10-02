@@ -1,7 +1,7 @@
-import CookiesHelper from "../helpers/cookies.helper";
-import MainPage from '../pages/Main.page.js';
-import AboutUsPage from "../pages/AboutUs.page.js";
-import CareersPage from "../pages/Creers.page.js";
+const CookiesHelper = require("../helpers/cookies.helper");
+const MainPage = require("../pages/Main.page.js");
+const AboutUsPage = require("../pages/AboutUs.page.js");
+const CareersPage = require("../pages/Creers.page.js");
 
 describe('About Us page test', () => {
   before(() => { MainPage.visit(); });
