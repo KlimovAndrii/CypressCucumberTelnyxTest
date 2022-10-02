@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - 'main' # (main branch) Set branch of the GH repo to push
+      - 'master' # (main branch) Set branch of the GH repo to push
 jobs:
   test_suite: # Name of the job
       runs-on: ubuntu-20.04 # Choosing OS
@@ -15,4 +15,17 @@ jobs:
       - run: npm ci
       #  - run: npm config set script-shell "G:\Git\bin\bash.exe"
       - name: run test
-        run: npm run test:headless # Our name of the headless script
+        run: npm run cypress:run # Our name of the headless script
+      - name: Publishing Mochawesome Report to Github Actions
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: mochawesome
+          path: cypress/reports
+      - name: Deploy report
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        if: always()
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: cypress/reports # The folder the action should deploy.
+          target-folder: docs
