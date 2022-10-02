@@ -15,4 +15,4 @@ jobs:
       - run: npm ci
       #  - run: npm config set script-shell "G:\Git\bin\bash.exe"
       - name: run test
-        run: npm run cypress:run # Our name of the headless script
+        run: npm run cypress:open # Our name of the headless script
