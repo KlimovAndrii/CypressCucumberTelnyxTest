@@ -6,8 +6,8 @@
     "cypress-xpath": "^2.0.1"
   },
   "scripts": {
-    "cypress:run": "cypress run",
-    "cypress:run:another": "cypress run --config-file cypressAnother.config.js",
+    "cypress:run": "cypress run --browser chrome",
+    "cypress:run:another": "cypress run --browser chrome --config-file cypressAnother.config.js",
     "cypress:open": "cypress open"
   }
 }
