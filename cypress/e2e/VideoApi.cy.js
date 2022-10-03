@@ -1,6 +1,6 @@
 import MainPage from '../pages/Main.page.js';
 import VideoApiPage from '../pages/VideoApi.page.js';
-import LogInPage from '../pages/Login.page.js';
+import LogInPage from '../pages/LogIn.page.js';
 import CookiesHelper from "../helpers/cookies.helper";
 
 describe('Video API page test', () => {
