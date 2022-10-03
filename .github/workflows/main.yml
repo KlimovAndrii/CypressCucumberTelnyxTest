@@ -39,4 +39,4 @@ jobs:
           destination-github-username: 'KlimovAndrii' # Your username
           destination-repository-name: 'CypressCucumberTelnyxTest' # Name of your repo
           user-email: 'ag.klimov@gmail.com' # Your email
-          target-branch: master
+          target-branch: gh-pages
