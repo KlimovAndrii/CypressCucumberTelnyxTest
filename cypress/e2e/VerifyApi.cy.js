@@ -1,7 +1,7 @@
 import CookiesHelper from "../helpers/cookies.helper";
 import MainPage from '../pages/Main.page.js';
 import VerifyApiPage from "../pages/VerifyApi.page.js";
-import ExpertRequestPage from "../pages/TalkToExpert.page.js";
+import TalkToExpert from "../pages/TalkToExpert.page.js";
 
 describe('Verify API page test', () => {
   before(() => { MainPage.visit(); });
@@ -14,6 +14,6 @@ describe('Verify API page test', () => {
     VerifyApiPage.hoverToPageLogo();
     VerifyApiPage.scrollIntoTalkToSalesButton();
     VerifyApiPage.clickTalkToSalesButton();
-    ExpertRequestPage.firstNameField().should('be.visible');
+    TalkToExpert.firstNameField().should('be.visible');
   });
 });
