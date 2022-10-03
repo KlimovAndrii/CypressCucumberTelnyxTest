@@ -9,5 +9,6 @@ Simple testing project.
 5. Open it in VSCode and run **npm install** commands in terminal.
    
 ## Run test
-1. Run test in headless mode **npm run cypress:run** command.
-2. Run test in headed mode **npm run cypress:open** command.
+1. Run test in headless mode **npm run cypress:run** command (cucumber framework).
+2. Run test in headed mode **npm run cypress:open** command (cucumber framework).
+3. Run test in headless mode **npm runcypress:run:another** command (uses a different config file **cypressAnother.config.js**).
