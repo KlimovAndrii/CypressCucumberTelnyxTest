@@ -35,7 +35,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ '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' }} # Instruction where to get token is below
         with:
-          source-directory: 'docs'
+          source-directory: 'docs/html'
           destination-github-username: 'KlimovAndrii' # Your username
           destination-repository-name: 'CypressCucumberTelnyxTest' # Name of your repo
           user-email: 'ag.klimov@gmail.com' # Your email
