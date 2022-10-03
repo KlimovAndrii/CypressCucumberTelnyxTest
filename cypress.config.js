@@ -1,14 +1,15 @@
 const { defineConfig } = require("cypress");
-const webpackPreprocessor = require('@cypress/webpack-preprocessor');
+const cucumber = require('cypress-cucumber-preprocessor').default;
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
-      on('file:preprocessor', webpackPreprocessor());
+      on('file:preprocessor', cucumber());
     },
     baseUrl: "https://telnyx.com/",
+    specPattern: 'cypress/e2e/**/*.feature'
   },
   viewportHeight: 1080,
   viewportWidth: 1920,
