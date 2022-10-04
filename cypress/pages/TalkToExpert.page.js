@@ -10,7 +10,7 @@ class TalkToExpertPage extends Page {
 	phoneNumberField() { return cy.xpath(`//input[@id="Phone_Number_Base__c"]`); }
 	companyWebSiteField() { return cy.xpath(`//input[@id="Website"]`); }
 	additionalInformationField() { return cy.xpath(`//textarea[@id="Form_Additional_Information__c"]`); }
-	iWantToReceiveEmailsCheckBox() { return cy.xpath(`//input[@id="mktoCheckbox_10687_0"]`); }
+	iWantToReceiveEmailsCheckBox() { return cy.xpath(`//input[@id="mktoCheckbox_10779_0"]`); }
 	submitButton() { return cy.xpath(`//button[@class="mktoButton"]`); }
 	
 	fillFirstNameFieldLocator(firstName) { this.firstNameField().clear().type(firstName); }
