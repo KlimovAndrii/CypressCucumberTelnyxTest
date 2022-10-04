@@ -29,14 +29,3 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: ./cypress/reports/html # The folder the action should deploy.
           target-folder: docs
-      - name: Pushes docs to another repository
-        uses: cpina/github-action-push-to-another-repository@v1.3
-        if: always()
-        env:
-          API_TOKEN_GITHUB: ${{ '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' }} # Instruction where to get token is below
-        with:
-          source-directory: 'docs'
-          destination-github-username: 'KlimovAndrii' # Your username
-          destination-repository-name: 'CypressCucumberTelnyxTest' # Name of your repo
-          user-email: 'ag.klimov@gmail.com' # Your email
-          target-branch: gh-pages
